@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/layout/Layout';
 import Card from '../../components/shared/Card';
 import Button from '../../components/shared/Button';
-import { FaEdit, FaDownload, FaUpload, FaCheckCircle, FaTimes, FaPlus, FaLinkedin, FaGraduationCap, FaUser } from 'react-icons/fa';
+import { FaEdit, FaDownload, FaUpload, FaCheckCircle, FaTimes, FaPlus, FaLinkedin, FaGraduationCap } from 'react-icons/fa';
 import studentData from '../../data/students.json';
 
 const StudentDashboard = () => {

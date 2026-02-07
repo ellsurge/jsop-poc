@@ -1,7 +1,62 @@
 [
   {
     "id": 1,
-    "description": "Alice applied to Tech Corp",
-    "timestamp": "2023-10-27T10:00:00Z"
+    "type": "application",
+    "description": "Alice Johnson applied to Tech Corp for Frontend Intern",
+    "timestamp": "2026-02-07T14:30:00Z"
+  },
+  {
+    "id": 2,
+    "type": "company",
+    "description": "New company 'HealthPlus' registered for approval",
+    "timestamp": "2026-02-07T13:15:00Z"
+  },
+  {
+    "id": 3,
+    "type": "listing",
+    "description": "Innovate Ltd created a new listing: Backend Developer",
+    "timestamp": "2026-02-07T12:00:00Z"
+  },
+  {
+    "id": 4,
+    "type": "approval",
+    "description": "Admin approved internship listing: Data Analyst at Global Solutions",
+    "timestamp": "2026-02-07T10:45:00Z"
+  },
+  {
+    "id": 5,
+    "type": "hired",
+    "description": "Bob Smith was hired by Future Sys",
+    "timestamp": "2026-02-07T09:30:00Z"
+  },
+  {
+    "id": 6,
+    "type": "application",
+    "description": "Charlie Brown applied to Alpha Industries",
+    "timestamp": "2026-02-07T08:20:00Z"
+  },
+  {
+    "id": 7,
+    "type": "company",
+    "description": "Tech Corp updated their company profile",
+    "timestamp": "2026-02-06T16:50:00Z"
+  },
+  {
+    "id": 8,
+    "type": "listing",
+    "description": "Media One submitted a new listing for review",
+    "timestamp": "2026-02-06T14:10:00Z"
+  },
+  {
+    "id": 9,
+    "type": "application",
+    "description": "Diana Prince applied to Tech Corp",
+    "timestamp": "2026-02-06T11:05:00Z"
+  },
+  {
+    "id": 10,
+    "type": "approval",
+    "description": "Admin approved new company account: BuildIt Ltd",
+    "timestamp": "2026-02-06T09:00:00Z"
   }
 ]

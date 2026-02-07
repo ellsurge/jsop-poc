@@ -4,7 +4,7 @@ import Layout from '../../components/layout/Layout';
 import Card from '../../components/shared/Card';
 import Button from '../../components/shared/Button';
 import Modal from '../../components/shared/Modal';
-import { FaMapMarkerAlt, FaClock, FaCalendarAlt, FaBriefcase, FaSearch, FaCheckCircle, FaSpinner } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaBriefcase, FaSearch, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 import internshipData from '../../data/internships.json';
 import companyData from '../../data/companies.json';
 import studentData from '../../data/students.json';
