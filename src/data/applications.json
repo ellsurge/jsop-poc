@@ -3,6 +3,45 @@
     "id": 1,
     "studentId": 1,
     "internshipId": 1,
-    "status": "pending"
+    "status": "Submitted",
+    "appliedDate": "2026-02-05T10:00:00Z",
+    "coverLetter": "I am very excited about the opportunity to work at Tech Corp. I have been following your work on open source projects and I believe my skills in React match the requirements perfectly."
+  },
+  {
+    "id": 2,
+    "studentId": 1,
+    "internshipId": 2,
+    "status": "Under Review",
+    "appliedDate": "2026-01-20T14:30:00Z",
+    "reviewedDate": "2026-01-25T09:15:00Z",
+    "coverLetter": "I have a strong background in backend development and would love to contribute to your fintech solutions."
+  },
+  {
+    "id": 3,
+    "studentId": 1,
+    "internshipId": 3,
+    "status": "Under Review",
+    "appliedDate": "2026-01-22T11:00:00Z",
+    "reviewedDate": "2026-01-28T16:00:00Z",
+    "coverLetter": "Robotics has always been my passion. I have experience with Python and hardware interfacing from my university projects."
+  },
+  {
+    "id": 4,
+    "studentId": 1,
+    "internshipId": 4,
+    "status": "Accepted",
+    "appliedDate": "2026-01-10T09:00:00Z",
+    "reviewedDate": "2026-01-15T10:00:00Z",
+    "acceptedDate": "2026-01-20T13:45:00Z",
+    "coverLetter": "Data analysis in healthcare allows for real impact. I am proficient in SQL and Tableau and eager to learn more."
+  },
+  {
+    "id": 5,
+    "studentId": 1,
+    "internshipId": 6,
+    "status": "Rejected",
+    "appliedDate": "2026-01-05T15:00:00Z",
+    "reviewedDate": "2026-01-08T11:30:00Z",
+    "coverLetter": "I have a keen eye for design and user experience. Please find my portfolio attached."
   }
 ]

@@ -1,24 +1,36 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../components/layout/Layout';
 import Card from '../../components/shared/Card';
 import Button from '../../components/shared/Button';
 import Modal from '../../components/shared/Modal';
-import { FaMapMarkerAlt, FaClock, FaCalendarAlt, FaBriefcase, FaSearch } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaCalendarAlt, FaBriefcase, FaSearch, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 import internshipData from '../../data/internships.json';
 import companyData from '../../data/companies.json';
+import studentData from '../../data/students.json';
 
 // Helper to get company details
 const getCompany = (companyId) => companyData.find(c => c.id === companyId);
+const student = studentData[0]; // Mock current logged-in student
 
 const StudentInternships = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
     industry: 'All',
     location: 'All',
     duration: 'All'
   });
+  
   const [selectedInternship, setSelectedInternship] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  
+  // Application Form State
+  const [coverLetter, setCoverLetter] = useState('');
+  const [isCvConfirmed, setIsCvConfirmed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
 
   // Filter Logic
   const filteredInternships = useMemo(() => {
@@ -41,17 +53,41 @@ const StudentInternships = () => {
 
   const handleCardClick = (internship) => {
     setSelectedInternship(internship);
-    setIsModalOpen(true);
+    setIsDetailModalOpen(true);
   };
 
-  const handleApply = () => {
-    setIsModalOpen(false);
-    // Navigate to application page or open application modal (future task)
-    alert(`Application started for ${selectedInternship.title} at ${getCompany(selectedInternship.companyId).name}`);
+  const handleOpenApplyModal = () => {
+    setIsDetailModalOpen(false);
+    setIsApplyModalOpen(true);
+    setCoverLetter("I am excited to apply for this position because...");
+    setIsCvConfirmed(false);
+  };
+
+  const handleSubmitApplication = () => {
+    setIsSubmitting(true);
+    // Simulate network request
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsApplyModalOpen(false);
+      setShowSuccessToast(true);
+      
+      // Redirect after showing toast for a moment
+      setTimeout(() => {
+        navigate('/student/applications');
+      }, 1500);
+    }, 1000);
   };
 
   return (
     <Layout role="student">
+      {/* Success Toast */}
+      {showSuccessToast && (
+        <div className="fixed top-5 right-5 z-50 bg-green-500 text-white px-6 py-3 rounded shadow-lg flex items-center animate-bounce">
+          <FaCheckCircle className="mr-2" />
+          Application submitted successfully!
+        </div>
+      )}
+
       {/* Header & Search */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Available Internships</h1>
@@ -183,8 +219,8 @@ const StudentInternships = () => {
 
       {/* Detail Modal */}
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isOpen={isDetailModalOpen}
+        onClose={() => setIsDetailModalOpen(false)}
         title="Internship Details"
       >
         {selectedInternship && (
@@ -264,11 +300,100 @@ const StudentInternships = () => {
 
             {/* Footer Actions */}
             <div className="flex justify-end space-x-3 pt-4 border-t">
-              <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+              <Button variant="secondary" onClick={() => setIsDetailModalOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleApply}>
+              <Button onClick={handleOpenApplyModal}>
                 Apply Now
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      {/* Application Modal */}
+      <Modal
+        isOpen={isApplyModalOpen}
+        onClose={() => !isSubmitting && setIsApplyModalOpen(false)}
+        title={selectedInternship ? `Apply to ${selectedInternship.title}` : 'Apply'}
+      >
+        {selectedInternship && (
+          <div className="space-y-6">
+            {/* Header Info (Condensed) */}
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-sm font-bold text-gray-500">
+                {getCompany(selectedInternship.companyId).name.substring(0, 2).toUpperCase()}
+              </div>
+              <div>
+                <p className="font-bold text-gray-900">{getCompany(selectedInternship.companyId).name}</p>
+                <p className="text-xs text-gray-500">{selectedInternship.location}</p>
+              </div>
+            </div>
+
+            {/* Profile Summary Preview */}
+            <div className="bg-gray-50 border border-gray-200 rounded-md p-3 text-sm">
+              <h4 className="font-semibold text-gray-700 mb-2 border-b pb-1">Your Profile Summary</h4>
+              <div className="grid grid-cols-2 gap-2 text-gray-600">
+                <div><span className="font-medium text-gray-800">Name:</span> {student.name}</div>
+                <div><span className="font-medium text-gray-800">CGPA:</span> {student.cgpa}</div>
+                <div><span className="font-medium text-gray-800">University:</span> {student.university}</div>
+                <div><span className="font-medium text-gray-800">Level:</span> {student.level}</div>
+              </div>
+              <div className="mt-2 flex items-center text-green-600 font-medium">
+                <FaCheckCircle className="mr-1" /> Profile verified
+              </div>
+               <div className="mt-1 flex items-center text-gray-600 text-xs">
+                <span className="font-medium mr-1">CV Attached:</span> {student.cvUrl}
+              </div>
+            </div>
+
+            {/* Form Section */}
+            <div>
+              <label htmlFor="coverLetter" className="block text-sm font-medium text-gray-700 mb-1">
+                Cover Letter / Motivation
+              </label>
+              <textarea
+                id="coverLetter"
+                rows={8}
+                className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-2 border"
+                placeholder="Why are you a good fit for this role?"
+                value={coverLetter}
+                onChange={(e) => setCoverLetter(e.target.value)}
+              />
+              <div className="text-right text-xs text-gray-400 mt-1">
+                {coverLetter.length} characters
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <input
+                id="confirmCv"
+                name="confirmCv"
+                type="checkbox"
+                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                checked={isCvConfirmed}
+                onChange={(e) => setIsCvConfirmed(e.target.checked)}
+              />
+              <label htmlFor="confirmCv" className="ml-2 block text-sm text-gray-900">
+                I confirm my CV is up to date and accurate.
+              </label>
+            </div>
+
+            {/* Footer Buttons */}
+            <div className="flex justify-end space-x-3 pt-4 border-t">
+              <Button 
+                variant="secondary" 
+                onClick={() => setIsApplyModalOpen(false)}
+                disabled={isSubmitting}
+              >
+                Cancel
+              </Button>
+              <Button 
+                onClick={handleSubmitApplication}
+                disabled={!isCvConfirmed || isSubmitting}
+                className="min-w-[150px] flex justify-center"
+              >
+                {isSubmitting ? <FaSpinner className="animate-spin" /> : 'Submit Application'}
               </Button>
             </div>
           </div>
