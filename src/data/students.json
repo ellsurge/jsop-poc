@@ -1,8 +1,20 @@
 [
   {
     "id": 1,
-    "name": "Alice Johnson",
-    "email": "alice@example.com",
-    "major": "Computer Science"
+    "name": "John Doe",
+    "email": "john.doe@university.edu.ng",
+    "phone": "+234 801 234 5678",
+    "university": "University of Lagos",
+    "department": "Computer Science",
+    "level": "400 Level",
+    "matricNumber": "190805021",
+    "cgpa": "4.52",
+    "dob": "2002-05-15",
+    "gender": "Male",
+    "address": "123 University Road, Akoka, Yaba, Lagos",
+    "cvUrl": "CV_John_Doe.pdf",
+    "skills": ["JavaScript", "React", "Python", "Data Analysis", "Communication"],
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "completion": 95
   }
 ]

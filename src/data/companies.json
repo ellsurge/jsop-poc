@@ -2,6 +2,41 @@
   {
     "id": 1,
     "name": "Tech Corp",
-    "industry": "Software"
+    "industry": "Technology",
+    "logo": "logo1.svg",
+    "website": "https://techcorp.example.com",
+    "description": "A leading provider of enterprise software solutions."
+  },
+  {
+    "id": 2,
+    "name": "Innovate Ltd",
+    "industry": "Finance",
+    "logo": "logo2.svg",
+    "website": "https://innovate.example.com",
+    "description": "Fintech startup revolutionizing payments in Africa."
+  },
+  {
+    "id": 3,
+    "name": "Future Sys",
+    "industry": "Manufacturing",
+    "logo": "logo3.svg",
+    "website": "https://futuresys.example.com",
+    "description": "Automated manufacturing systems and robotics."
+  },
+  {
+    "id": 4,
+    "name": "Global Solutions",
+    "industry": "Healthcare",
+    "logo": "logo4.svg",
+    "website": "https://global.example.com",
+    "description": "Healthcare management systems and telemedicine."
+  },
+  {
+    "id": 5,
+    "name": "Alpha Industries",
+    "industry": "Media",
+    "logo": "logo5.svg",
+    "website": "https://alpha.example.com",
+    "description": "Digital media and advertising agency."
   }
 ]

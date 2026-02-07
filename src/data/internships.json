@@ -3,6 +3,202 @@
     "id": 1,
     "companyId": 1,
     "title": "Frontend Developer Intern",
-    "description": "React.js internship"
+    "location": "Lagos",
+    "type": "On-site",
+    "duration": "24 weeks",
+    "slots": 5,
+    "filled": 2,
+    "deadline": "2026-03-15",
+    "status": "Active",
+    "stipend": "₦150,000 / month",
+    "skills": ["React", "JavaScript", "CSS", "Git"],
+    "description": "<p>We are looking for a passionate Frontend Developer Intern to join our team. You will work closely with our senior developers to build modern web applications using React.</p>",
+    "responsibilities": [
+      "Develop new user-facing features",
+      "Build reusable code and libraries for future use",
+      "Ensure the technical feasibility of UI/UX designs",
+      "Optimize application for maximum speed and scalability"
+    ],
+    "requirements": [
+      "Basic understanding of web markup, including HTML5 and CSS3",
+      "Basic understanding of client-side scripting and JavaScript frameworks, including jQuery",
+      "Good understanding of ReactJS",
+      "Proficient understanding of code versioning tools, such as Git"
+    ]
+  },
+  {
+    "id": 2,
+    "companyId": 2,
+    "title": "Backend Engineering Intern",
+    "location": "Remote",
+    "type": "Remote",
+    "duration": "12 weeks",
+    "slots": 3,
+    "filled": 0,
+    "deadline": "2026-04-01",
+    "status": "Active",
+    "stipend": "₦120,000 / month",
+    "skills": ["Node.js", "Express", "MongoDB", "API Design"],
+    "description": "<p>Join our backend team to help build scalable APIs for our fintech products.</p>",
+    "responsibilities": [
+      "Assist in the design and implementation of APIs",
+      "Write clean, maintainable code",
+      "Collaborate with frontend developers"
+    ],
+    "requirements": [
+      "Knowledge of Node.js and Express",
+      "Experience with databases like MongoDB or PostgreSQL",
+      "Understanding of RESTful API principles"
+    ]
+  },
+  {
+    "id": 3,
+    "companyId": 3,
+    "title": "Robotics Process Automation Intern",
+    "location": "Port Harcourt",
+    "type": "On-site",
+    "duration": "16 weeks",
+    "slots": 2,
+    "filled": 1,
+    "deadline": "2026-03-20",
+    "status": "Active",
+    "stipend": "₦100,000 / month",
+    "skills": ["Python", "C++", "Automation", "Hardware"],
+    "description": "<p>Work on cutting-edge robotics projects in our manufacturing plant.</p>",
+    "responsibilities": [
+      "Program robotic arms for assembly lines",
+      "Debug automation scripts",
+      "Maintain hardware equipment"
+    ],
+    "requirements": [
+      "Strong C++ or Python skills",
+      "Interest in robotics and automation",
+      "Engineering background preferred"
+    ]
+  },
+  {
+    "id": 4,
+    "companyId": 4,
+    "title": "Data Analyst Intern",
+    "location": "Abuja",
+    "type": "Hybrid",
+    "duration": "24 weeks",
+    "slots": 4,
+    "filled": 3,
+    "deadline": "2026-03-10",
+    "status": "Active",
+    "stipend": "₦130,000 / month",
+    "skills": ["Excel", "SQL", "Tableau", "Statistics"],
+    "description": "<p>Analyze healthcare data to improve patient outcomes and operational efficiency.</p>",
+    "responsibilities": [
+      "Clean and organize large datasets",
+      "Create visualizations and dashboards",
+      "Generate weekly performance reports"
+    ],
+    "requirements": [
+      "Proficiency in Excel and SQL",
+      "Experience with visualization tools like Tableau or PowerBI",
+      "Strong analytical skills"
+    ]
+  },
+  {
+    "id": 5,
+    "companyId": 5,
+    "title": "Digital Marketing Intern",
+    "location": "Lagos",
+    "type": "On-site",
+    "duration": "8 weeks",
+    "slots": 2,
+    "filled": 0,
+    "deadline": "2026-05-01",
+    "status": "Active",
+    "stipend": "₦80,000 / month",
+    "skills": ["Social Media", "Content Writing", "SEO", "Canva"],
+    "description": "<p>Help manage our social media presence and create engaging content.</p>",
+    "responsibilities": [
+      "Draft social media posts",
+      "Assist with SEO research",
+      "Create graphics using Canva"
+    ],
+    "requirements": [
+      "Good writing and communication skills",
+      "Familiarity with major social media platforms",
+      "Creative mindset"
+    ]
+  },
+  {
+    "id": 6,
+    "companyId": 1,
+    "title": "UI/UX Design Intern",
+    "location": "Remote",
+    "type": "Remote",
+    "duration": "12 weeks",
+    "slots": 2,
+    "filled": 2,
+    "deadline": "2026-02-28",
+    "status": "Active",
+    "stipend": "₦100,000 / month",
+    "skills": ["Figma", "Prototyping", "User Research"],
+    "description": "<p>Design intuitive user interfaces for our next-gen products.</p>",
+    "responsibilities": [
+      "Create wireframes and prototypes",
+      "Conduct user testing",
+      "Collaborate with product managers"
+    ],
+    "requirements": [
+      "Portfolio demonstrating design skills",
+      "Proficiency in Figma",
+      "Understanding of UX principles"
+    ]
+  },
+  {
+    "id": 7,
+    "companyId": 2,
+    "title": "Financial Analyst Intern",
+    "location": "Lagos",
+    "type": "On-site",
+    "duration": "16 weeks",
+    "slots": 3,
+    "filled": 1,
+    "deadline": "2026-03-25",
+    "status": "Active",
+    "stipend": "₦140,000 / month",
+    "skills": ["Accounting", "Financial Modeling", "Excel"],
+    "description": "<p>Assist our finance team with market analysis and reporting.</p>",
+    "responsibilities": [
+      "Analyze financial statements",
+      "Build financial models",
+      "Assist with audits"
+    ],
+    "requirements": [
+      "Accounting or Finance background",
+      "Strong Excel skills",
+      "Attention to detail"
+    ]
+  },
+  {
+    "id": 8,
+    "companyId": 4,
+    "title": "Mobile Developer Intern",
+    "location": "Abuja",
+    "type": "Hybrid",
+    "duration": "24 weeks",
+    "slots": 2,
+    "filled": 0,
+    "deadline": "2026-04-15",
+    "status": "Active",
+    "stipend": "₦160,000 / month",
+    "skills": ["Flutter", "Dart", "Firebase"],
+    "description": "<p>Build cross-platform mobile apps for our healthcare platform.</p>",
+    "responsibilities": [
+      "Develop mobile screens using Flutter",
+      "Integrate with backend APIs",
+      "Fix bugs and improve performance"
+    ],
+    "requirements": [
+      "Experience with Flutter and Dart",
+      "Understanding of mobile app lifecycle",
+      "Git proficiency"
+    ]
   }
 ]
