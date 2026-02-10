@@ -1,0 +1,72 @@
+{
+  "students": [
+    {
+      "id": 101,
+      "name": "Sarah Connor",
+      "email": "sarah.c@uni.edu",
+      "university": "University of Ibadan",
+      "department": "Cyber Security",
+      "level": "300 Level",
+      "cgpa": "4.20",
+      "registeredDate": "2026-02-01T08:00:00Z"
+    },
+    {
+      "id": 102,
+      "name": "James Bond",
+      "email": "bond.j@uni.edu",
+      "university": "University of Abuja",
+      "department": "Mechanical Engineering",
+      "level": "400 Level",
+      "cgpa": "3.85",
+      "registeredDate": "2026-02-03T14:20:00Z"
+    },
+    {
+      "id": 103,
+      "name": "Peter Parker",
+      "email": "parker.p@uni.edu",
+      "university": "Lagos State University",
+      "department": "Physics",
+      "level": "200 Level",
+      "cgpa": "4.90",
+      "registeredDate": "2026-02-05T11:10:00Z"
+    }
+  ],
+  "companies": [
+    {
+      "id": 201,
+      "name": "HealthPlus",
+      "industry": "Healthcare",
+      "rcNumber": "RC1234567",
+      "contactPerson": "Dr. Smith",
+      "registeredDate": "2026-02-02T10:00:00Z"
+    },
+    {
+      "id": 202,
+      "name": "BuildIt Ltd",
+      "industry": "Construction",
+      "rcNumber": "RC7654321",
+      "contactPerson": "Engr. Brown",
+      "registeredDate": "2026-02-04T16:30:00Z"
+    }
+  ],
+  "listings": [
+    {
+      "id": 301,
+      "title": "Backend Intern",
+      "company": "Innovate Ltd",
+      "location": "Remote",
+      "slots": 3,
+      "deadline": "2026-03-01",
+      "description": "Looking for Node.js developers."
+    },
+    {
+      "id": 302,
+      "title": "UI Designer",
+      "company": "Media One",
+      "location": "Lagos",
+      "slots": 2,
+      "deadline": "2026-02-28",
+      "description": "Figma expertise required."
+    }
+  ]
+}

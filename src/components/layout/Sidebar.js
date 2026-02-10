@@ -32,8 +32,9 @@ const Sidebar = ({ role }) => {
 
   return (
     <aside className="w-64 bg-gray-800 text-white min-h-screen flex flex-col shadow-lg">
-      <div className="h-16 flex items-center justify-center bg-gray-900 shadow-md">
-        <span className="text-lg font-bold tracking-wider uppercase">{role} Portal</span>
+      <div className="h-24 flex flex-col items-center justify-center bg-gray-900 shadow-md">
+        <img src="/project-logo.jpg" alt="Logo" className="h-10 w-auto mb-2" />
+        <span className="text-sm font-bold tracking-wider uppercase">{role} Portal</span>
       </div>
       <div className="flex-1 overflow-y-auto py-4">
         <ul className="space-y-1">

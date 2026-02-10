@@ -20,6 +20,7 @@ const Navbar = ({ role }) => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate('/')}>
+              <img className="h-8 w-auto mr-2" src="/project-logo.jpg" alt="JSOP Logo" />
               <h1 className="text-xl font-bold text-gray-800">JSOP Platform</h1>
             </div>
           </div>

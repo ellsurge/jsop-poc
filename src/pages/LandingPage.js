@@ -1,13 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Button from '../components/shared/Button';
 import Card from '../components/shared/Card';
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
+  const handleLaunch = (role, path) => {
+    toast.info(`Switching to ${role} demo view`);
+    navigate(path);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+      <img src="/project-logo.jpg" alt="JSOP Logo" className="h-24 w-auto mb-8 rounded shadow-md" />
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
           JSOP Internship Platform Demo
@@ -23,7 +30,7 @@ const LandingPage = () => {
           <p className="text-gray-600 mb-8 flex-grow">
             Browse internships, apply to companies, and track your application status.
           </p>
-          <Button onClick={() => navigate('/student/dashboard')} className="w-full">
+          <Button onClick={() => handleLaunch('Student', '/student/dashboard')} className="w-full">
             Launch Student Demo
           </Button>
         </Card>
@@ -33,7 +40,7 @@ const LandingPage = () => {
           <p className="text-gray-600 mb-8 flex-grow">
             Post new listings, manage internships, and review student applicants.
           </p>
-          <Button onClick={() => navigate('/company/dashboard')} variant="primary" className="w-full bg-green-600 hover:bg-green-700 focus:ring-green-500">
+          <Button onClick={() => handleLaunch('Company', '/company/dashboard')} variant="primary" className="w-full bg-green-600 hover:bg-green-700 focus:ring-green-500">
             Launch Company Demo
           </Button>
         </Card>
@@ -43,7 +50,7 @@ const LandingPage = () => {
           <p className="text-gray-600 mb-8 flex-grow">
             Monitor platform activity, approve accounts, and generate system reports.
           </p>
-          <Button onClick={() => navigate('/admin/dashboard')} variant="primary" className="w-full bg-purple-600 hover:bg-purple-700 focus:ring-purple-500">
+          <Button onClick={() => handleLaunch('Admin', '/admin/dashboard')} variant="primary" className="w-full bg-purple-600 hover:bg-purple-700 focus:ring-purple-500">
             Launch Admin Demo
           </Button>
         </Card>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './pages/LandingPage';
 
 // Student Pages
@@ -40,6 +42,7 @@ function App() {
         <Route path="/admin/approvals" element={<AdminApprovals />} />
         <Route path="/admin/reports" element={<AdminReports />} />
       </Routes>
+      <ToastContainer position="bottom-right" autoClose={3000} />
     </Router>
   );
 }

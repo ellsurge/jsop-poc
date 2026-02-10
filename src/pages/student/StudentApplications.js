@@ -5,7 +5,7 @@ import StatusBadge from '../../components/shared/StatusBadge';
 import Button from '../../components/shared/Button';
 import Card from '../../components/shared/Card';
 import Modal from '../../components/shared/Modal';
-import { FaFileAlt, FaMapMarkerAlt, FaRegCalendarAlt, FaTimesCircle } from 'react-icons/fa';
+import { FaFileAlt, FaMapMarkerAlt, FaTimesCircle } from 'react-icons/fa';
 
 import applicationData from '../../data/applications.json';
 import internshipData from '../../data/internships.json';
